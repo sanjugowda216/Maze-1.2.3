@@ -112,8 +112,8 @@ def up():
         reset()
     elif reachwater():
         print("Quenched the turtle's thirst!")
-        player.color("black")
-        screen.bgcolor("gray")
+        player.color("blue")
+        screen.bgcolor("white")
         reset()
 def down():
     player.setheading(270)
@@ -122,8 +122,8 @@ def down():
         reset()
     elif reachwater():
         print("Quenched the turtle's thirst!")
-        player.color("black")
-        screen.bgcolor("gray")
+        player.color("blue")
+        screen.bgcolor("white")
         reset()
 def right():
     player.setheading(0)
@@ -132,8 +132,8 @@ def right():
         reset()
     elif reachwater():
         print("Quenched the turtle's thirst!")
-        player.color("black")
-        screen.bgcolor("gray")
+        player.color("blue")
+        screen.bgcolor("white")
         reset()
 def left():
     player.setheading(180)
@@ -142,9 +142,8 @@ def left():
         reset()
     elif reachwater():
         print("Quenched the turtle's thirst!")
-        player.color("black")
-        wall.color("black")
-        screen.bgcolor("gray")
+        player.color("blue")
+        screen.bgcolor("white")
         reset()
 screen.listen()
 screen.onkey(up, "w")
