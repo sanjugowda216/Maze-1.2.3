@@ -62,7 +62,7 @@ def maze():
    # wall_draw(-50, -100, 10, 5)
     #wall_draw(100, -150, 10, 5)
     #wall_draw(200, 100, 10, 5)
-def collision():
+def collision(player,walls):
     player_x = player.xcor()
     player_y = player.ycor()
 
@@ -72,18 +72,18 @@ def collision():
         wall_x = wall.xcor()
         wall_y = wall.ycor()
 
-        wall_width = wall.shapesize()[1] * 20
-        wall_height = wall.shapesize()[0] * 20
+        wall_width = wall.shapesize()[1]*20
+        wall_height = wall.shapesize()[0]*20
 
-        wall_left = wall_x - wall_width / 2
-        wall_right = wall_x + wall_width / 2
-        wall_top = wall_y + wall_height / 2
-        wall_bottom = wall_y - wall_height / 2
+        wall_left = wall_x - wall_width/2
+        wall_right = wall_x + wall_width/2
+        wall_top = wall_y + wall_height/2
+        wall_bottom = wall_y - wall_height/2
 
-        player_left = player_x - player_width / 2
-        player_right = player_x + player_width / 2
-        player_top = player_y + player_height / 2
-        player_bottom = player_y - player_height / 2
+        player_left = player_x - player_width/2
+        player_right = player_x + player_width/2
+        player_top = player_y + player_height/2
+        player_bottom = player_y - player_height/2
 
         if (player_right> wall_left and player_left<wall_right and
             player_top>wall_bottom and player_bottom<wall_top):
@@ -108,7 +108,7 @@ def reset():
 def up():
     player.setheading(90)
     player.forward(10)
-    if collision():
+    if collision(player,walls):
         reset()
     elif reachwater():
         print("Quenched the turtle's thirst!")
@@ -118,7 +118,7 @@ def up():
 def down():
     player.setheading(270)
     player.forward(10)
-    if collision():
+    if collision(player,walls):
         reset()
     elif reachwater():
         print("Quenched the turtle's thirst!")
@@ -128,7 +128,7 @@ def down():
 def right():
     player.setheading(0)
     player.forward(10)
-    if collision():
+    if collision(player,walls):
         reset()
     elif reachwater():
         print("Quenched the turtle's thirst!")
@@ -138,7 +138,7 @@ def right():
 def left():
     player.setheading(180)
     player.forward(10)
-    if collision():
+    if collision(player,walls):
         reset()
     elif reachwater():
         print("Quenched the turtle's thirst!")
