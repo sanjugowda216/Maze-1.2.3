@@ -65,21 +65,17 @@ def maze():
 def collision(player,walls):
     playerx = player.xcor()
     playery = player.ycor()
-
     player_w = 20 * 2 
     player_h = 20 * 2 
     for wall in walls:
         wall_x = wall.xcor()
         wall_y = wall.ycor()
-
         wall_width = wall.shapesize()[1]*20
         wall_height = wall.shapesize()[0]*20
-
         wall_left = wall_x - wall_width/2
         wall_right = wall_x + wall_width/2
         wall_top = wall_y + wall_height/2
         wall_bottom = wall_y - wall_height/2
-
         player_left = playerx - player_w/2
         player_right = playerx + player_w/2
         player_top = playery + player_h/2
